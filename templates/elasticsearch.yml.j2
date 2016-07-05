@@ -201,6 +201,30 @@ index.indexing.slowlog.threshold.index.debug: {{ elasticsearch_index_indexing_sl
 index.indexing.slowlog.threshold.index.trace: {{ elasticsearch_index_indexing_slowlog_threshold_index_trace }}
 {% endif%}
 
+################################## Translog ##################################
+
+{% if elasticsearch_index_translog_flush_threshold_size %}
+index.translog.flush_threshold_size: {{ elasticsearch_index_translog_flush_threshold_size }}
+{% endif%}
+{% if elasticsearch_index_translog_flush_threshold_ops %}
+index.translog.flush_threshold_ops: {{ elasticsearch_index_translog_flush_threshold_ops }}
+{% endif%}
+{% if elasticsearch_index_translog_flush_threshold_period %}
+index.translog.flush_threshold_period: {{ elasticsearch_index_translog_flush_threshold_period }}
+{% endif%}
+{% if elasticsearch_index_translog_interval %}
+index.translog.interval: {{ elasticsearch_index_translog_interval }}
+{% endif%}
+{% if elasticsearch_index_translog_sync_interval %}
+index.translog.sync_interval: {{ elasticsearch_index_translog_sync_interval }}
+{% endif%}
+{% if elasticsearch_index_translog_durability %}
+index.translog.durability: {{ elasticsearch_index_translog_durability }}
+{% endif%}
+{% if elasticsearch_index_translog_fs_type %}
+index.translog.fs.type: {{ elasticsearch_index_translog_fs_type }}
+{% endif%}
+
 ################################## GC Logging ################################
 
 {% if monitor_jvm_gc_young_warn %}
